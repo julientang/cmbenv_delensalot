@@ -5,7 +5,8 @@ cmbenv
 Introduction
 ------------
 
-This package contains scripts for installing cmbenv, an environment for
+This package is a fork of exgalsky/xgsmenv environment written and maintained by Marcelo Alvarez.
+It contains scripts for installing cmbenv, an environment for
 running extraglactic sky modeling software under development. Currently
 configured for running healpy and GPU-enabled jax on Perlmutter at NERSC.
 
