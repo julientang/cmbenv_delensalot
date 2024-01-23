@@ -17,7 +17,7 @@ conda install --yes -c conda-forge -c anaconda -c nvidia -c defaults \
     healpy \
     ipython \
     jax \
-    jaxlib=*cuda* \
+    jaxlib=*=*cuda* \
     joblib \
     jupyter \
     matplotlib \
