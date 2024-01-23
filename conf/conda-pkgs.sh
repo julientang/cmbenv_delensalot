@@ -28,7 +28,7 @@ conda install --yes -c conda-forge -c anaconda -c nvidia -c defaults \
     namaster \
     tqdm \
     meson \
-    pkg-config 
+ 
 
     
  && rm -rf $CONDADIR/pkgs/*
