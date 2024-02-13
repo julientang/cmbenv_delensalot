@@ -34,7 +34,7 @@ Load the environment installed above::
 
 
 
-.. code-block:: shellscript
+.. code-block:: shell
     cmbprefix=$SCRATCH/cmbenv
     installcmbenv () {
 
