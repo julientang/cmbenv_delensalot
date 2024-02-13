@@ -32,7 +32,7 @@ Load the environment installed above::
     module use ${prefix}/${CMBENVVERSION}/modulefiles
     module load cmbenv
 
-bashrc functions::
+
 
 .. code-block:: shellscript
     cmbprefix=$SCRATCH/cmbenv
