@@ -34,7 +34,8 @@ Load the environment installed above::
 
 
 
-.. code-block:: shell
+Bash convenience functions::
+    
     cmbprefix=$SCRATCH/cmbenv
     installcmbenv () {
 
