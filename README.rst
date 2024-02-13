@@ -32,37 +32,39 @@ Load the environment installed above::
     module use ${prefix}/${CMBENVVERSION}/modulefiles
     module load cmbenv
 
-bashrc functions:
-cmbprefix=$SCRATCH/cmbenv
-installcmbenv () {
+bashrc functions::
 
-    tag=0.0.1
-    branch=master
-    if [ ! -z $1 ] ; then    tag=$1; fi
-    if [ ! -z $2 ] ; then branch=$2; fi
+.. code-block:: shell
+    cmbprefix=$SCRATCH/cmbenv
+    installcmbenv () {
 
-    export PYTHONPATH=
-    cd
-    export CMBENVVERSION=$branch-$tag
-    rm -rf $cmbprefix/$CMBENVVERSION
-    tmp_build_dir=$SCRATCH/cmbenv
-    rm -rf ${tmp_build_dir}
-    git clone -b $branch https://github.com/1cosmologist/cmbenv ${tmp_build_dir}
-    cd ${tmp_build_dir}
-    # echo $PATH
-    echo `which python`
-    CONF=perlmutter PKGS=default PREFIX=${cmbprefix} ./install.sh |& tee install-${CMBENVVERSION}.log
-}
+        tag=0.0.1
+        branch=master
+        if [ ! -z $1 ] ; then    tag=$1; fi
+        if [ ! -z $2 ] ; then branch=$2; fi
 
-loadcmbenv () {
-    
-    tag=0.0.1
-    branch=master
-    if [ ! -z $1 ] ; then    tag=$1; fi
-    if [ ! -z $2 ] ; then branch=$2; fi
+        export PYTHONPATH=
+        cd
+        export CMBENVVERSION=$branch-$tag
+        rm -rf $cmbprefix/$CMBENVVERSION
+        tmp_build_dir=$SCRATCH/cmbenv
+        rm -rf ${tmp_build_dir}
+        git clone -b $branch https://github.com/1cosmologist/cmbenv ${tmp_build_dir}
+        cd ${tmp_build_dir}
+        # echo $PATH
+        echo `which python`
+        CONF=perlmutter PKGS=default PREFIX=${cmbprefix} ./install.sh |& tee install-${CMBENVVERSION}.log
+    }
 
-    export CMBENVVERSION=$branch-$tag
-    module use ${cmbprefix}/${CMBENVVERSION}/modulefiles
-    module load cmbenv
-    source ${cmbprefix}/${CMBENVVERSION}/conda/bin/activate
-}
+    loadcmbenv () {
+        
+        tag=0.0.1
+        branch=master
+        if [ ! -z $1 ] ; then    tag=$1; fi
+        if [ ! -z $2 ] ; then branch=$2; fi
+
+        export CMBENVVERSION=$branch-$tag
+        module use ${cmbprefix}/${CMBENVVERSION}/modulefiles
+        module load cmbenv
+        source ${cmbprefix}/${CMBENVVERSION}/conda/bin/activate
+    }
