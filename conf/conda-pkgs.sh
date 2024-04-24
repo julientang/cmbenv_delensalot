@@ -12,6 +12,7 @@ conda install --yes -c conda-forge -c anaconda -c nvidia -c defaults \
     camb \
     cuda-nvcc \
     cudatoolkit \
+    emcee \
     fitsio \
     gputil \
     healpy \
@@ -24,6 +25,7 @@ conda install --yes -c conda-forge -c anaconda -c nvidia -c defaults \
     numpy \
     scipy \
     numba \
+    pygtc \
     pysm3 \
     namaster \
     tqdm \
