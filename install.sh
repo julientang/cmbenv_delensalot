@@ -79,8 +79,8 @@ sed -i 's@_CONDAPRGENV_@'"$CONDAPRGENV"'@g' cmbenv.module
 cp cmbenv.module $MODULEDIR/$CMBENVVERSION
 cp $topdir/cmbenv.modversion $MODULEDIR/.version_$CMBENVVERSION
 
-chgrp -R $GRP $MODULEDIR
-chmod -R u=rwX,g=rX,o-rwx $MODULEDIR
+# chgrp -R $GRP $MODULEDIR
+# chmod -R u=rwX,g=rX,o-rwx $MODULEDIR
 
 # All done
 echo Done at $(date)

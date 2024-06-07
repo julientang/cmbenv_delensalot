@@ -65,6 +65,11 @@ Bash convenience functions::
         if [ ! -z $2 ] ; then branch=$2; fi
 
         export CMBENVVERSION=$branch-$tag
+
+        module unload cudatoolkit # ignore the systemwide cudatoolkit to avoid version conflicts
+        module load cudatoolkit/12.2
+        module load cudnn/8.9.3_cuda12
+        module load cray-mpich craype-accel-nvidia80
         module use ${cmbprefix}/${CMBENVVERSION}/modulefiles
         module load cmbenv
         source ${cmbprefix}/${CMBENVVERSION}/conda/bin/activate
