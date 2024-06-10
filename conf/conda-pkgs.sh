@@ -10,15 +10,11 @@ conda config --set channel_priority flexible
 conda install --yes -c conda-forge -c anaconda -c nvidia -c defaults \
     astropy \
     camb \
-    cuda-nvcc \
-    cudatoolkit \
     emcee \
     fitsio \
     gputil \
     healpy \
     ipython \
-    jax \
-    jaxlib=*=*cuda* \
     joblib \
     jupyter \
     matplotlib \
@@ -30,7 +26,6 @@ conda install --yes -c conda-forge -c anaconda -c nvidia -c defaults \
     namaster \
     tqdm \
     meson \
- 
 
     
  && rm -rf $CONDADIR/pkgs/*
