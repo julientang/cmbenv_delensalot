@@ -8,9 +8,9 @@ pip install --no-cache-dir "jax[cuda12]" "jaxlib" -f https://storage.googleapis.
 pip install --force --no-cache-dir --no-binary=mpi4py mpi4py
 pip install cython
 
-git clone git@github.com:1cosmologist/skytools.git skytools
-cd skytools
-pip install --no-dependencies .
+# git clone git@github.com:1cosmologist/skytools.git skytools
+# cd skytools
+# pip install --no-dependencies .
 
 if [ $? != 0 ]; then
     echo "ERROR installing pip packages; exiting"

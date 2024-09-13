@@ -24,6 +24,7 @@ conda install --yes -c conda-forge -c anaconda -c nvidia -c defaults \
     pygtc \
     pysm3 \
     namaster \
+    skytools \
     tqdm \
     meson \
 
