@@ -18,7 +18,7 @@ conda install --yes -c conda-forge -c anaconda -c nvidia -c defaults \
     matplotlib \
     numpy=1.22.4 \
     scipy \
-    setuptools=75.1.0 \
+    setuptools=64 \
 
     
  && rm -rf $CONDADIR/pkgs/*
