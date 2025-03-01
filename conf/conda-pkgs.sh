@@ -2,6 +2,7 @@
 echo Current time $(date) Installing conda packages
 echo condadir is $CONDADIR
 
+conda install python=3.9.20
 conda config --set solver classic
 conda install --yes -n base conda-libmamba-solver
 conda config --set solver libmamba
@@ -18,7 +19,7 @@ conda install --yes -c conda-forge -c anaconda -c nvidia -c defaults \
     joblib \
     jupyter \
     matplotlib \
-    numpy \
+    numpy=1.22.4 \
     scipy \
     numba \
     pygtc \
@@ -26,6 +27,7 @@ conda install --yes -c conda-forge -c anaconda -c nvidia -c defaults \
     namaster \
     skytools \
     tqdm \
+    setuptools=75.1.0 \
     meson \
 
     
